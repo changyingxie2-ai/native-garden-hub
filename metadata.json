@@ -1,0 +1,6 @@
+{
+  "name": "Bunnings Native Garden Starter Hub - Adelaide Concept",
+  "description": "An independent mobile-friendly website concept guiding Adelaide beginners through starting Australian native gardens in small spaces, balconies, and courtyards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
