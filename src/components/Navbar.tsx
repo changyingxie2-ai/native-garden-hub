@@ -64,6 +64,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             Our Story
           </a>
           <a
+            href="#blog"
+            onClick={(e) => {
+              e.preventDefault();
+              handleLinkClick('blog');
+            }}
+            className="hover:text-[#1E3A2B] transition-colors whitespace-nowrap shrink-0"
+          >
+            Blog
+          </a>
+          <a
             href="#faq"
             onClick={(e) => {
               e.preventDefault();
@@ -71,7 +81,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             }}
             className="hover:text-[#1E3A2B] transition-colors whitespace-nowrap shrink-0"
           >
-            Beginner FAQ
+            FAQ
           </a>
           <a
             href="#contact"
@@ -134,6 +144,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             className="w-full text-left py-2.5 px-3 rounded-md text-base font-medium text-[#2E5A44] hover:bg-[#EDE8DF] transition-colors"
           >
             Our Story & Concept
+          </button>
+          <button
+            onClick={() => handleLinkClick('blog')}
+            className="w-full text-left py-2.5 px-3 rounded-md text-base font-medium text-[#2E5A44] hover:bg-[#EDE8DF] transition-colors"
+          >
+            Blog
           </button>
           <button
             onClick={() => handleLinkClick('faq')}

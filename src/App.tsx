@@ -11,6 +11,7 @@ import { OurStory } from './components/OurStory';
 import { Planner } from './components/Planner';
 import { StarterKit } from './components/StarterKit';
 import { AdelaideGuide } from './components/AdelaideGuide';
+import { BlogSection } from './components/BlogSection';
 import { FaqSection } from './components/FaqSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -56,7 +57,10 @@ export default function App() {
         {/* Regional Focus: Adelaide Microclimates & Soils */}
         <AdelaideGuide />
 
-        {/* Section 5: Beginner FAQ */}
+        {/* Section 5: Blog */}
+        <BlogSection onNavigate={scrollToSection} />
+
+        {/* Section 6: Beginner FAQ */}
         <FaqSection />
 
         {/* Section 6: Contact Us */}

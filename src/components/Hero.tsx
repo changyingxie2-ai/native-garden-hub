@@ -47,7 +47,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartClick, onExploreKitClick }) =
 
               <button
                 onClick={onExploreKitClick}
-                className="inline-flex items-center justify-center px-5 py-3.5 text-base font-semibold text-[#2E5A44] bg-[#EDE7DD] hover:bg-[#E3DC lock] hover:bg-[#E2D9CC] rounded-xl transition-colors cursor-pointer"
+                className="inline-flex items-center justify-center px-5 py-3.5 text-base font-semibold text-[#2E5A44] bg-[#EDE7DD] hover:bg-[#E2D9CC] rounded-xl transition-colors cursor-pointer"
               >
                 View Starter Kit Essentials
               </button>
