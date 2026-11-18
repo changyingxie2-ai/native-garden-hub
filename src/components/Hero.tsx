@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Sun, Droplets, HeartHandshake } from 'lucide-react';
+import { ArrowRight, Sun } from 'lucide-react';
 import heroImage from '../assets/images/hero_adelaide_garden_1793614973583.jpg';
 
 interface HeroProps {
@@ -9,7 +9,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onStartClick, onExploreKitClick }) => {
   return (
-    <section id="home" className="relative pt-8 pb-16 md:pt-14 md:pb-24 overflow-hidden">
+    <section id="home" className="relative pt-8 pb-16 md:pt-14 md:pb-24 overflow-hidden scroll-mt-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
@@ -17,55 +17,64 @@ export const Hero: React.FC<HeroProps> = ({ onStartClick, onExploreKitClick }) =
           <div className="lg:col-span-7 space-y-6">
             
             {/* Context kicker text (No pill enclosure per frontend design constitution) */}
-            <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-wide text-[#7C5A38]">
+            <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-semibold tracking-wide text-[#7C5A38]">
               <span className="text-[#C25B38] font-bold">ADELAIDE, SOUTH AUSTRALIA</span>
               <span aria-hidden="true">·</span>
-              <span className="text-[#3A6B52]">COMMUNITY STARTER CONCEPT</span>
+              <span className="text-[#3A6B52]">BEGINNER NATIVE GARDENING</span>
               <span aria-hidden="true">·</span>
-              <span>SMALL-SPACE READY</span>
+              <span>SMALL OUTDOOR SPACES</span>
             </div>
 
             {/* Hero Headline with text-wrap: balance */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1E3A2B] tracking-tight leading-[1.15]" style={{ textWrap: 'balance' }}>
-              Start your Adelaide native garden with confidence.
+              Start Your Native Garden in Adelaide
             </h1>
 
-            {/* Value Proposition */}
+            {/* Welcoming Introduction */}
             <p className="text-base sm:text-lg text-[#415549] leading-relaxed max-w-xl">
-              Turn your balcony, courtyard, or small yard into a resilient Australian oasis. We help Adelaide gardening beginners choose the right native plants, soil, and pots for our sunny Mediterranean climate—without the guesswork or jargon.
+              New to gardening or working with a balcony, courtyard or small outdoor space? This welcoming Adelaide guide helps beginners choose local native plants, plan a small garden step by step and save water through dry South Australian summers.
             </p>
 
-            {/* Primary Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
-              <button
-                onClick={onStartClick}
+            {/* Primary Action Button & Secondary Link */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+              <a
+                href="#planner"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onStartClick();
+                }}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-semibold text-white bg-[#2E5A44] hover:bg-[#234635] active:bg-[#1A3427] rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer group"
               >
-                <span>Start Your Native Garden</span>
+                <span>Start Planning</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </button>
+              </a>
 
-              <button
-                onClick={onExploreKitClick}
-                className="inline-flex items-center justify-center px-5 py-3.5 text-base font-semibold text-[#2E5A44] bg-[#EDE7DD] hover:bg-[#E2D9CC] rounded-xl transition-colors cursor-pointer"
+              <a
+                href="#starter-kit"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onExploreKitClick();
+                }}
+                className="inline-flex items-center justify-center gap-1.5 px-4 py-3 text-base font-semibold text-[#2E5A44] hover:text-[#1E3A2B] underline decoration-[#2E5A44]/40 underline-offset-4 hover:decoration-[#1E3A2B] transition-colors cursor-pointer"
               >
-                View Starter Kit Essentials
-              </button>
+                <span>Explore the Starter Kit</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
 
-            {/* Natural Proof & Climate Adjacency */}
-            <div className="pt-4 border-t border-[#E8E2D6] grid grid-cols-3 gap-3 text-xs sm:text-sm text-[#4A5D52]">
+            {/* Practical Beginner Highlights */}
+            <div className="pt-4 border-t border-[#E8E2D6] grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm text-[#4A5D52]">
               <div className="flex flex-col">
-                <span className="font-bold text-[#1E3A2B] text-base sm:text-lg tabular-nums">40°C+</span>
-                <span className="text-xs text-[#5D6F63]">Summer heat resilient</span>
+                <span className="font-bold text-[#1E3A2B] text-base">Local Native Plants</span>
+                <span className="text-xs text-[#5D6F63]">Selected for Adelaide conditions</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-bold text-[#1E3A2B] text-base sm:text-lg tabular-nums">1/3 Water</span>
-                <span className="text-xs text-[#5D6F63]">Once roots establish</span>
+                <span className="font-bold text-[#1E3A2B] text-base">Water-Wise Choices</span>
+                <span className="text-xs text-[#5D6F63]">Suited to warm, dry summers</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-bold text-[#1E3A2B] text-base sm:text-lg">Local Bees</span>
-                <span className="text-xs text-[#5D6F63]">Attracts pollinators</span>
+                <span className="font-bold text-[#1E3A2B] text-base">Small-Space Friendly</span>
+                <span className="text-xs text-[#5D6F63]">Ideal for balconies &amp; courtyards</span>
               </div>
             </div>
 
