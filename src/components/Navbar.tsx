@@ -15,7 +15,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
 
   return (
     <header className="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#E6E1D8]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4 lg:gap-8">
         {/* Zone 1: Single Brand element */}
         <a
           href="#home"
@@ -32,7 +32,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
         </a>
 
         {/* Zone 2: Navigation Links */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-[#4A5D52]">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-7 text-sm font-medium text-[#4A5D52]">
+          <a
+            href="#home"
+            onClick={(e) => {
+              e.preventDefault();
+              handleLinkClick('home');
+            }}
+            className="hover:text-[#1E3A2B] transition-colors whitespace-nowrap shrink-0"
+          >
+            Home
+          </a>
           <a
             href="#planner"
             onClick={(e) => {
